@@ -1,0 +1,24 @@
+@import "./reset.scss";
+@import "./variable.scss";
+@import "./mixin.scss";
+
+
+// /* 改变主题色变量 */
+$--color-primary: $purple-color;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+body{
+    background-color: #f3f3f3;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+    &:hover{
+        text-decoration: none;
+    }
+}

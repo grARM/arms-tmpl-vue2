@@ -1,0 +1,64 @@
+//圆角矩形
+@mixin block-block-radius($radius: 2px){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//字体缩小  针对字体小于12px
+@mixin mini-font-size($mfs: 12px){
+    font-size: 12px;
+    -webkit-transform-origin-x: 0;
+    -webkit-transform: scale($mfs / 12px);
+}
+
+
+// @mixin global-big-star($width: 20px, $height: 20px){
+//  width: $width;
+//  height: $height;
+//  background-size: contain;
+//  background-repeat: no-repeat;
+//  background-image: url(../images/big-star@3x.png);
+// }
+
+// @mixin global-small-star($width: 20px, $height: 20px){
+//  width: $width;
+//  height: $height;
+//  background-size: contain;
+//  background-repeat: no-repeat;
+//  background-image: url(../images/small-star@3x.png);
+// }
+
+@mixin contain-bg-icon($url){
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: $url;
+}
+
+@mixin svg-icon($url){
+    background-repeat: no-repeat;
+    background-image: $url;
+}
+
+// 加载大图区分1x 和2x, 同时设置size和repeat属性
+@mixin big-bg-png($url){
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url($url + '.png');
+    @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url($url + '@2x.png');
+    }
+}
+
+// 加载大图区分1x 和2x
+@mixin pure-big-bg-png($url){
+    background-image: url($url + '.png');
+    @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url($url + '@2x.png');
+    }
+}
+
+@mixin btn-disable($op: 0.5){
+    opacity: $op;
+    filter:alpha(opacity = $op*100);
+}

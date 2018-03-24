@@ -1,0 +1,31 @@
+@import "../lib/mixin.scss";
+.share-dlg{
+    color: #000;
+    &-icon{
+        width: 70px;
+        height: 70px;
+        margin: 20px auto 40px auto;
+        @include big-bg-png('../assets/icon-tick');
+    }
+    .title{
+        height: 30px;
+        line-height: 30px;
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .des{
+        height: 18px;
+        line-height: 18px;
+        font-size: 18px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &-qrcode{
+        display: block;
+        margin: 0 auto 80px auto;
+        width: 150px;
+        height: 150px;
+    }
+
+}
